@@ -1,4 +1,5 @@
-﻿using PP_ShapeInfo.Helper;
+﻿using NSubstitute;
+using PP_ShapeInfo.Helper;
 using Xunit;
 
 namespace PP_ShapeInfo_UnitTests
