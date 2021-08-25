@@ -9,12 +9,14 @@ namespace PP_ShapeInfo
 {
     public class FileHandler
     {
-        public FileHandler(IApplicationService applicationservice)
+        public FileHandler(IApplicationService applicationservice, IFileHelper fileHelper)
         {
             ApplicationService = applicationservice;
+            FileHelper = fileHelper;
         }
 
         IApplicationService ApplicationService { get; }
+        IFileHelper FileHelper { get; }
 
         public ICollection<Presentation> HandleFileOpen(string[] files)
         {
@@ -22,7 +24,7 @@ namespace PP_ShapeInfo
             foreach (var file in files ?? Array.Empty<string>())
             {
                 var fileInfo = new FileInfo(file);
-                if (PresentationHelper.IsSupportedPresentationFile(fileInfo.Extension.TrimStart('.')))
+                if (FileHelper.IsSupportedPresentationFile(fileInfo.Extension.TrimStart('.')))
                 {
                     presentationInfo.Add(ApplicationService.ExtractPresentationInfo(fileInfo.FullName));
                 }
