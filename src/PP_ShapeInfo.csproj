@@ -55,8 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="PP_Shape.cs" />
-    <Compile Include="PP_Slide.cs" />
+    <Compile Include="Models\PP_Shape.cs" />
+    <Compile Include="Models\PP_Slide.cs" />
+    <Compile Include="Services\PP_ApplicationService.cs" />
     <Compile Include="SupportedFileExtensions.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -73,7 +74,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PP_Presentation.cs" />
+    <Compile Include="Models\PP_Presentation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

@@ -1,7 +1,7 @@
 ﻿using Microsoft.Office.Core;
 using System.Collections.Generic;
 
-namespace PP_ShapeInfo
+namespace PP_ShapeInfo.Models
 {
     public class PP_Shape
     {

@@ -1,10 +1,12 @@
-﻿using System.Collections.Generic;
-using System.IO;
-using Microsoft.Office.Core;
+﻿using Microsoft.Office.Core;
 using Microsoft.Office.Interop.PowerPoint;
+using Models.PP_ShapeInfo.Models;
+using PP_ShapeInfo.Models;
+using System.Collections.Generic;
+using System.IO;
 using PowerPoint = Microsoft.Office.Interop.PowerPoint;
 
-namespace PP_ShapeInfo
+namespace PP_ShapeInfo.Services
 {
     class PP_ApplicationService
     {

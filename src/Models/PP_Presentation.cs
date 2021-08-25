@@ -1,7 +1,7 @@
-﻿using Microsoft.Office.Interop.PowerPoint;
+﻿using Models.PP_ShapeInfo.Models;
 using System.Collections.Generic;
 
-namespace PP_ShapeInfo
+namespace PP_ShapeInfo.Models
 {
     public class PP_Presentation
     {

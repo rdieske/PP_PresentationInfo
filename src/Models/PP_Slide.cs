@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
-namespace PP_ShapeInfo
+﻿using PP_ShapeInfo.Models;
+using System.Collections.Generic;
+
+namespace Models.PP_ShapeInfo.Models
 {
     public class PP_Slide
     {
