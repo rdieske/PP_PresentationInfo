@@ -1,4 +1,5 @@
-﻿using PP_ShapeInfo.Services;
+﻿using PP_ShapeInfo.Helper;
+using PP_ShapeInfo.Services;
 using System.Windows;
 
 namespace PP_ShapeInfo.Views
@@ -8,7 +9,7 @@ namespace PP_ShapeInfo.Views
     /// </summary>
     public partial class MainWindow : Window
     {
-        FileHandler fileHandler = new FileHandler(new ApplicationService());
+        FileHandler fileHandler = new FileHandler(new ApplicationService(), new FileHelper());
         public MainWindow()
         {
             InitializeComponent();

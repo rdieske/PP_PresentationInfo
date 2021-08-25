@@ -55,7 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Helper\PresentationHelper.cs" />
+    <Compile Include="Helper\FileHelper.cs" />
     <Compile Include="Models\Shape.cs" />
     <Compile Include="Models\Slide.cs" />
     <Compile Include="Models\ShapeType.cs" />

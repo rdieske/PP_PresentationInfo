@@ -3,7 +3,7 @@ using Xunit;
 
 namespace PP_ShapeInfo_UnitTests
 {
-    public class PresentationHelper_Tests
+    public class FileHelper_Tests
     {
         [Theory]
         [InlineData("xls", false)]
@@ -12,7 +12,9 @@ namespace PP_ShapeInfo_UnitTests
         [InlineData("pptx", true)]
         public void IsSupportedFileExtension_PassExtensions_ShouldReturnExpectedValue(string extension, bool expectedValue)
         {
-            var returnValue = PresentationHelper.IsSupportedPresentationFile(extension);
+            var sut = new FileHelper();
+
+            var returnValue = sut.IsSupportedPresentationFile(extension);
 
             Assert.Equal(expectedValue, returnValue);
         }
