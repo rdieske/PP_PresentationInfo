@@ -1,0 +1,20 @@
+﻿using PP_ShapeInfo.Helper;
+using Xunit;
+
+namespace PP_ShapeInfo_UnitTests
+{
+    public class PresentationHelper_Tests
+    {
+        [Theory]
+        [InlineData("xls", false)]
+        [InlineData("pdf", false)]
+        [InlineData("ppt", true)]
+        [InlineData("pptx", true)]
+        public void IsSupportedFileExtension_PassExtensions_ShouldReturnExpectedValue(string extension, bool expectedValue)
+        {
+            var returnValue = PresentationHelper.IsSupportedPresentationFile(extension);
+
+            Assert.Equal(expectedValue, returnValue);
+        }
+    }
+}

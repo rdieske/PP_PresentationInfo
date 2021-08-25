@@ -1,4 +1,5 @@
-﻿using PP_ShapeInfo.Models;
+﻿using PP_ShapeInfo.Helper;
+using PP_ShapeInfo.Models;
 using PP_ShapeInfo.Services;
 using System;
 using System.Collections.Generic;
@@ -6,28 +7,28 @@ using System.IO;
 
 namespace PP_ShapeInfo
 {
-    internal class FileHandler
+    public class FileHandler
     {
-        PP_ApplicationService PPApplicationService = new PP_ApplicationService();
-
-        internal void HandleFileOpen(string[] files)
+        public FileHandler(IApplicationService applicationservice)
         {
-            var presentationInfo = new List<PP_Presentation>();
-            foreach (var file in files)
+            ApplicationService = applicationservice;
+        }
+
+        IApplicationService ApplicationService { get; }
+
+        public ICollection<Presentation> HandleFileOpen(string[] files)
+        {
+            var presentationInfo = new List<Presentation>();
+            foreach (var file in files ?? Array.Empty<string>())
             {
                 var fileInfo = new FileInfo(file);
-                if (IsSupportedFileExtension(fileInfo.Extension.TrimStart('.')))
+                if (PresentationHelper.IsSupportedPresentationFile(fileInfo.Extension.TrimStart('.')))
                 {
-                    presentationInfo.Add(PPApplicationService.ExtractPresentationInfo(fileInfo));
+                    presentationInfo.Add(ApplicationService.ExtractPresentationInfo(fileInfo.FullName));
                 }
             }
+            return presentationInfo;
         }
 
-        private static bool IsSupportedFileExtension(string extension)
-        {
-            return Enum.TryParse<SupportedFileExtensions>(extension, out _);
-        }
-
-     
     }
 }

@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PP_ShapeInfo", "src/PP_ShapeInfo.csproj", "{613D6EC2-313E-4208-95DC-2BABB96A4918}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PP_ShapeInfo", "src\PP_ShapeInfo.csproj", "{613D6EC2-313E-4208-95DC-2BABB96A4918}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PP_ShapeInfo_UnitTests", "PP_ShapeInfo_UnitTests\PP_ShapeInfo_UnitTests.csproj", "{1CA2CBF0-E9B2-4575-A734-A95AFF7C3B49}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{613D6EC2-313E-4208-95DC-2BABB96A4918}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{613D6EC2-313E-4208-95DC-2BABB96A4918}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{613D6EC2-313E-4208-95DC-2BABB96A4918}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CA2CBF0-E9B2-4575-A734-A95AFF7C3B49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CA2CBF0-E9B2-4575-A734-A95AFF7C3B49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CA2CBF0-E9B2-4575-A734-A95AFF7C3B49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CA2CBF0-E9B2-4575-A734-A95AFF7C3B49}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
