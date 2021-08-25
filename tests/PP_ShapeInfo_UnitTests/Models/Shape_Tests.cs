@@ -1,5 +1,4 @@
 ﻿using PP_ShapeInfo.Models;
-using System.Collections.Generic;
 using Xunit;
 
 namespace PP_ShapeInfo_UnitTests.Models
